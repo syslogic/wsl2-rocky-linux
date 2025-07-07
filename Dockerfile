@@ -41,11 +41,11 @@ RUN echo '%docker ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/docker
 RUN [ "touch", "/root/.dockerenv" ]
 
 # WSL2 config files.
-COPY [ "./usr/share/icons/rocky.ico", "/usr/share/icons/rocky.ico" ]
-COPY [ "./usr/lib/wsl/terminal-profile.json", "/usr/lib/wsl/terminal-profile.json" ]
-COPY [ "./etc/wsl-distribution.conf", "/etc/wsl-distribution.conf" ]
-COPY [ "./etc/wsl.conf", "/etc/wsl.conf" ]
+COPY [ "./src/rocky.ico", "/usr/share/icons/rocky.ico" ]
+COPY [ "./src/terminal-profile.json", "/usr/lib/wsl/terminal-profile.json" ]
+COPY [ "./src/wsl-distribution.conf", "/etc/wsl-distribution.conf" ]
+COPY [ "./src/wsl.conf", "/etc/wsl.conf" ]
 
 # OOBE script.
-COPY [ "./etc/oobe.sh", "/etc/oobe.sh" ]
+COPY [ "./src/oobe.sh", "/etc/oobe.sh" ]
 RUN [ "chmod", "+x", "/etc/oobe.sh" ]

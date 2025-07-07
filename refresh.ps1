@@ -22,7 +22,7 @@ gzip --force --best .\$FILENAME_A
 If (Test-Path ".\$FILENAME_A.gz") {
 
     Rename-Item ".\$FILENAME_A.gz" .\$FILENAME_B
-    Get-Item -Path .\$FILENAME_B | Select -Property Name, Length | Foreach {
+    Get-Item -Path .\$FILENAME_B | Select-Object -Property Name, Length | Foreach-Object {
         Write-Host $_.Name $("has `{0:N2} mb" -f ($_.Length/1048576))
     };
 
