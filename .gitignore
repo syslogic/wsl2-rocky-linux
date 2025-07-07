@@ -1,4 +1,2 @@
-/manifest.json
 *.wsl.gz
-*.tar
 *.wsl
