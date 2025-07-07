@@ -8,7 +8,7 @@ param (
 
 Set-StrictMode -Version latest
 
-$TarPath = Resolve-Path "C:/Home/WSL2/rocky9/rocky9.tar"
+$TarPath = Resolve-Path "C:/Home/WSL2/rocky9/rocky96_dist.wsl"
 $hash = (Get-Filehash $TarPath -Algorithm SHA256).Hash
 
 $manifest= @{
